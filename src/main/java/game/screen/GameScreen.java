@@ -245,7 +245,9 @@ public class GameScreen implements Screen {
             @Override
             public void instanceEventOccurred(AudioCueInstanceEvent audioCueInstanceEvent) {
                 if (audioCueInstanceEvent.type == Type.LOOP) { // on loop
-                    for (Block b : level.getBlocks()) b.toggle(); // toggle all Blocks
+                    Platform.runLater(() -> {
+                        for (Block b : level.getBlocks()) b.toggle(); // toggle all Blocks
+                    });
                 }
             }
         };
