@@ -43,7 +43,18 @@
           <groupId>com.adonax</groupId>
           <artifactId>audiocue</artifactId>
           <version>2.1.0</version>
+          <exclusions>
+            <exclusion>
+              <groupId>org.junit.jupiter</groupId>
+              <artifactId>junit-jupiter</artifactId>
+            </exclusion>
+            <exclusion>
+              <groupId>org.junit.jupiter</groupId>
+              <artifactId>junit-jupiter-params</artifactId>
+            </exclusion>
+          </exclusions>
       </dependency>
+
 
 <dependency>
       <groupId>org.junit.jupiter</groupId>
